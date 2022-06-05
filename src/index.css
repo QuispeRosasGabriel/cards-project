@@ -1,0 +1,123 @@
+@import url("./styles/variables.css");
+@import url("./styles/base.css");
+
+.app__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app__container--cardType{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 10px 10px;
+}
+.app__container--label {
+    color: var(--white);
+    font-family: var(--font-roboto);
+}
+
+.app__aside {
+    background-color: var(--bg-sidebar);
+    padding: 0 15px;
+}
+
+.app__container--cardType select {
+    border: none;
+    border-radius: 10px;
+    padding: 5px 0 5px 5px;
+    outline: none;
+    font-family: var(--font-roboto);
+}
+
+
+.card__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 20px 20px;
+}
+
+.card__container--image {
+    display: block;
+    max-width: 370px;
+    width: 100%;
+}
+
+.lds-hourglass {
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    right: 40%;
+   
+  }
+  .lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-hourglass 1.2s infinite;
+  }
+  @keyframes lds-hourglass {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+}
+
+.app__header {
+    background-color: var(--bg-header);
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__header input {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 0 10px 10px;
+    outline: none;
+    max-width: 250px;
+    width: 100%;
+    font-family: var(--font-roboto);
+}
+  
+
+
+  
+
+
+@media (max-width: 426px) {
+    .app__container {
+        flex-direction: column;
+    }
+    .app__container--cardType {
+        align-items: center;
+    }
+
+    .lds-hourglass {
+        top: 70%;
+    }
+}
+
+@media (min-width: 426px) {
+    .app__aside {
+        min-height: 100vh;
+    }
+}

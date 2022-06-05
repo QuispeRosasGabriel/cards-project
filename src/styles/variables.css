@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --bg-container: #101010;
+    --font-roboto: 'Roboto', sans-serif;
+    --white: #FFFFFF;
+    --bg-header: #2b3743;
+    --bg-sidebar: #274C82
+}
